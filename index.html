@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+darkMode: 'class'
+}
+</script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition duration-300 flex items-center justify-center min-h-screen">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md">
+	<div class="flex justify-between items-center mb-4">
+	<h1 class="text-2x1 font-bold mb-4 text-center">Character Counter</h1>
+	<button id="modeToggle" class="bg-gray-300 dark:bg-gray-700 px-3 py-1 rounded text-gray-800 dark:text-gray-100">🌙</button>
+</div>
+
+	<textarea id="textInput" rows="6" class="w-full border border-gray-300 dark:border-gray-600 rounded p-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Typing Something..."></textarea>
+
+	<div class="flex justify-between items-center mb-3 text-gray-700 dark:text-gray-200">
+		<span id="charCount">0 Characters</span>
+		<span id="wordCount">0 Words</span>
+	</div>
+
+<div class="flex justify-between items-center mb-3 text-gray-700 dark:text-gray-200">
+	<span id="remaining">Remaining: 200</span>
+	<div>
+	<button id="copyBtn" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 mr-2">Copy</button>
+	<button id="clearBtn" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Clear</button>	
+	</div>
+</div>
+
+
+<div class="relative w-full h-2 bg-gray-200 dark:bg-gray-700 rounded mb-4">
+	<div id="progressBar" class="absolute h-2 bg-blue-500 rounded w-0"></div>
+</div>
+
+<h2 class="text-gray-800 dark:text-gray-100 font-semibold mb-2">Live Preview</h2>
+<div id="preview" class="p-2 border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-[50px]"></div>
+</div>
+</body>
+</html>
