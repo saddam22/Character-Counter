@@ -1,6 +1,8 @@
 const textInput = document.getElementById("textInput");
 const charCount = document.getElementById("charCount");
 const wordCount = document.getElementById("wordCount");
+const emojiCount = document.getElementById("emojiCount");
+const hashtagCount = document.getElementById("hashtagCount");
 const remaining = document.getElementById("remaining");
 const progressBar = document.getElementById("progressBar");
 const clearBtn = document.getElementById("clearBtn");
@@ -9,6 +11,15 @@ const preview = document.getElementById("preview");
 const modeToggle = document.getElementById("modeToggle");
 
 const maxChars = 200; // Maximum character Limit
+
+//Load from LocalStorage on start
+if(localStorage.getItem("textInput")){
+	textInput.value = localStorage.getItem("textInput");
+	updateCounts();
+}
+
+//Regex for Emoji detection
+const emojiRegex = 
 
 //Update Counts and Progress
 textInput.addEventListener("input", () =>{
